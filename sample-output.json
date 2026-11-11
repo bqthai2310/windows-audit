@@ -1,0 +1,111 @@
+{
+  "host": {
+    "name": "THAIPC",
+    "os": "Microsoft Windows 11 Pro",
+    "uptime_hours": 2.89,
+    "generated_at": "2026-11-10T17:53:25.7197538Z"
+  },
+  "findings": [
+    {
+      "check": "auto_service_stopped",
+      "severity": "warning",
+      "detail": "7 automatic service(s) not running.",
+      "evidence": {
+        "stopped_count": 7,
+        "services": [
+          "AppXSvc [Stopped]",
+          "asus [Stopped]",
+          "edgeupdate [Stopped]",
+          "GoogleUpdaterInternalService157.0.8089.0 [Stopped]",
+          "GoogleUpdaterService157.0.8089.0 [Stopped]",
+          "LDPlayerSvr [Stopped]",
+          "MapsBroker [Stopped]"
+        ],
+        "truncated": false
+      }
+    },
+    {
+      "check": "scheduled_task_failed",
+      "severity": "warning",
+      "detail": "101 scheduled task(s) with non-zero LastTaskResult.",
+      "evidence": {
+        "failed_count": 101,
+        "tasks": [
+          "\\AMDAutoUpdate (0xC000013A)",
+          "\\AMDInstallLauncher (0x00041303)",
+          "\\CreateExplorerShellUnelevatedTask (0x40010004)",
+          "\\HermesWebUIAutoStart (0x8007010B)",
+          "\\Hermes_WebUI_taiop (0x8007010B)",
+          "\\i4Airplay_Users (0x80070002)",
+          "\\OneDrive Per-Machine Standalone Update Task (0x8004EE04)",
+          "\\StartAUEP (0x00041301)",
+          "\\StartCN (0x00000001)",
+          "\\StartDVR (0x00000001)",
+          "\\TAIOP-Canonical-Startup (0x00000001)",
+          "\\ASUS\\AcPowerNotification (0x00041301)",
+          "\\ASUS\\P508PowerAgent_sdk (0x80070002)",
+          "\\Microsoft\\Office\\Office Automatic Updates 2.0 (0x8007042B)",
+          "\\Microsoft\\Office\\Office Performance Monitor (0x00041303)",
+          "\\Microsoft\\Office\\Office Startup Maintenance (0xFFFFFFF8)",
+          "\\Microsoft\\Windows\\AccountHealth\\RecoverabilityToastTask (0x80040154)",
+          "\\Microsoft\\Windows\\Active Directory Rights Management Services Client\\AD RMS Rights Policy Template Management (Automated) (0x00041303)",
+          "\\Microsoft\\Windows\\Active Directory Rights Management Services Client\\AD RMS Rights Policy Template Management (Manual) (0x00041303)",
+          "\\Microsoft\\Windows\\Application Experience\\MareBackup (0x00041303)",
+          "\\Microsoft\\Windows\\Application Experience\\Microsoft Compatibility Appraiser Exp (0x00041303)",
+          "\\Microsoft\\Windows\\Application Experience\\SdbinstMergeDbTask (0x00041303)",
+          "\\Microsoft\\Windows\\BitLocker\\BitLocker Encrypt All Drives (0x00041303)",
+          "\\Microsoft\\Windows\\BitLocker\\BitLocker MDM policy Refresh (0x00041303)",
+          "\\Microsoft\\Windows\\Bluetooth\\UninstallDeviceTask (0x00041303)"
+        ],
+        "truncated": true
+      }
+    },
+    {
+      "check": "reboot_pending",
+      "severity": "info",
+      "detail": "No reboot pending.",
+      "evidence": {
+        "cbs_reboot_pending": false,
+        "pending_file_rename_operations": false,
+        "pending_file_rename_count": 0
+      }
+    },
+    {
+      "check": "disk_low",
+      "severity": "info",
+      "detail": "All fixed disks have >= 15% free space.",
+      "evidence": {
+        "low_count": 0,
+        "disks": [
+          "C: 66.3% free",
+          "D: 88.8% free",
+          "E: 67.1% free"
+        ]
+      }
+    },
+    {
+      "check": "error_events_24h",
+      "severity": "warning",
+      "detail": "23 critical/error System event(s) in the last 24h.",
+      "evidence": {
+        "error_count": 23,
+        "window_hours": 24,
+        "since": "2026-11-09T17:53:24.7354479Z"
+      }
+    },
+    {
+      "check": "port_no_owner",
+      "severity": "info",
+      "detail": "All listening ports resolve to a single live owner process.",
+      "evidence": {
+        "listener_count": 54,
+        "orphan_count": 0
+      }
+    }
+  ],
+  "summary": {
+    "critical": 0,
+    "warning": 3,
+    "info": 3
+  }
+}
